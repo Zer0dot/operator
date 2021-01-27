@@ -7,7 +7,7 @@ const { ffmnemonic, alchemyProjectId, etherscanKey, infuraProjectId } = require(
  */
 module.exports = {
   solidity: {
-    version: "0.6.12",
+    version: "0.6.10",
     settings: {
       optimizer: {
         enabled: true,
@@ -23,10 +23,10 @@ module.exports = {
     //   accounts: { mnemonic: ffmnemonic }
     // },
     hardhat: {
-      // forking: {
-      //   url: `https://eth-mainnet.alchemyapi.io/v2/${alchemyProjectId}`,
-      //   blockNumber: 11449150
-      // }
+      forking: {
+        url: `https://eth-mainnet.alchemyapi.io/v2/${alchemyProjectId}`,
+        blockNumber: 11735500
+      }
     },
     kovan: {
       url: `https://kovan.infura.io/v3/${infuraProjectId}`,
