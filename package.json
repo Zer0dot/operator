@@ -16,7 +16,7 @@
     "hardhat": "^2.0.6"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "npx hardhat test"
   },
   "author": "Zer0dot",
   "license": "AGPL-3.0-only"

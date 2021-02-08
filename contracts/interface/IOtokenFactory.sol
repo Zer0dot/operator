@@ -1,6 +1,6 @@
 pragma solidity = 0.6.10;
 
-interface IOTokenFactory { 
+interface IOtokenFactory { 
     function getOtoken(
         address _underlyingAsset,
         address _strikeAsset,
