@@ -4,15 +4,12 @@ pragma solidity = 0.6.10;
 pragma experimental ABIEncoderV2;
 
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import { IController } from "./interface/IController.sol";
 import { IOtokenFactory } from "./interface/IOtokenFactory.sol";
 import { Actions } from "./lib/Actions.sol";
 import { console } from "hardhat/console.sol";
 
 contract Operator { 
-    using SafeERC20 for IERC20;
-
     IController controller = IController(0x4ccc2339F87F6c59c6893E1A678c2266cA58dC72);
     IOtokenFactory factory = IOtokenFactory(0x7C06792Af1632E77cb27a558Dc0885338F4Bdf8E);
     
@@ -20,7 +17,6 @@ contract Operator {
     address constant WETH_ADDRESS = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
 
     mapping(address => uint256) vaultIdByOwner;
-
 
     function openVaultAndDeposit(uint256 amount) external {
         require(vaultIdByOwner[msg.sender] == 0, "Operator: Vault ID already exists");
