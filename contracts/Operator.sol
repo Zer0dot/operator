@@ -93,7 +93,6 @@ contract Operator {
                 data: ""
             });
 
-
             console.log("(Contract Log) About to call operate.");
             controller.operate(actions);
             console.log("(Contract Log) oToken balance:", IERC20(newOtoken).balanceOf(msg.sender));
