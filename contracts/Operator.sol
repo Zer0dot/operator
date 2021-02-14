@@ -144,7 +144,7 @@ contract Operator {
             // });
 
 
-        } else {                        // There are no old oTokens to burn
+        } else {  // There are no old oTokens to burn
         Actions.ActionArgs[] memory actions = new Actions.ActionArgs[](1);
 
         // Mint oToken params
